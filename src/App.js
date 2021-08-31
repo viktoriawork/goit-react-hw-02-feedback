@@ -14,13 +14,13 @@ class App extends Component {
       [name]: prevState[name] + 1,
     }));
   };
-
+ 
   countTotalFeedback = () =>
     this.state.good + this.state.neutral + this.state.bad;
 
   countPositiveFeedbackPercentage = () => {
-    const sumState = this.state.good + this.state.neutral + this.state.bad;
-    const resSum = Math.floor((this.state.good * 100) / sumState);
+  
+    const resSum = Math.floor((this.state.good * 100) / this.countTotalFeedback());
     return resSum;
   };
 
