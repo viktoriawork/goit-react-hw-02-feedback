@@ -7,9 +7,10 @@ const FeedbackOptions = (props) => {
     <ul>
       {options.map((option) => (
         <li key={option}>
-          <button
+          <button type="button"
             className={Styles.btnReview}
             onClick={() => onLeaveFeedback(option)}
+            name = {option}
           >
             {option}
           </button>
