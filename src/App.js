@@ -81,13 +81,13 @@ const App = () => {
 
     const countTotalFeedback = () =>
     good + neutral + bad;
-
+const total= countTotalFeedback();
     const countPositiveFeedbackPercentage = () => {
   
       const resSum = Math.floor((good * 100) / countTotalFeedback());
       return resSum;
     };
-
+const positiveFeedback = countPositiveFeedbackPercentage();
   return (
     <>
     <Section title={"Please leave feedback"}>
@@ -101,8 +101,8 @@ const App = () => {
         good={good}
         neutral={neutral}
         bad={bad}
-        total={countTotalFeedback}
-        positivePercentage={countPositiveFeedbackPercentage}
+        total={total}
+        positivePercentage={positiveFeedback}
       />
     </Section>
   </>
